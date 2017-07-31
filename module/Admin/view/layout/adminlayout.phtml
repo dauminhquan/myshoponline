@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Shop Online | Quần áo đẹp</title>
+        <!-- global -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+	<link href="http://localhost:8081/shop/public/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+	<link href="http://localhost:8081/shop/public/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="http://localhost:8081/shop/public/css/core.css" rel="stylesheet" type="text/css">
+	<link href="http://localhost:8081/shop/public/css/components.css" rel="stylesheet" type="text/css">
+	<link href="http://localhost:8081/shop/public/css/colors.css" rel="stylesheet" type="text/css">
+        <!-- /global -->
+        <!-- corejs -->
+	<script type="text/javascript" src="http://localhost:8081/shop/public/js/plugins/loaders/pace.min.js"></script>
+	<script type="text/javascript" src="http://localhost:8081/shop/public/js/core/libraries/jquery.min.js"></script>
+	<script type="text/javascript" src="http://localhost:8081/shop/public/js/core/libraries/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://localhost:8081/shop/public/js/plugins/loaders/blockui.min.js"></script>
+        <!-- /corejs -->
+        <!--Theme js -->
+	<?php
+            if(isset($_SESSION['scriptfile']))
+            {
+                echo $_SESSION['scriptfile'];
+            }
+        ?>
+         <!--/Theme js -->
+    </head>
+    <body>
+
+        <div class="navbar navbar-inverse">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html"><img src="http://localhost:8081/shop/public/images/logo_light.png" alt=""></a>
+
+                <ul class="nav navbar-nav visible-xs-block">
+                    <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
+                    <li><a class="sidebar-mobile-main-toggle"><i class="icon-paragraph-justify3"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="navbar-collapse collapse" id="navbar-mobile">
+                <ul class="nav navbar-nav">
+                    <li><a class="sidebar-control sidebar-main-toggle hidden-xs"><i class="icon-paragraph-justify3"></i></a></li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon-git-compare"></i>
+                            <span class="visible-xs-inline-block position-right">Git updates</span>
+                            <span class="badge bg-warning-400">9</span>
+                        </a>
+
+                        <div class="dropdown-menu dropdown-content">
+                            <div class="dropdown-content-heading">
+                                Git updates
+                                <ul class="icons-list">
+                                    <li><a href="#"><i class="icon-sync"></i></a></li>
+                                </ul>
+                            </div>
+
+                            <ul class="media-list dropdown-content-body width-350">
+                                <li class="media">
+                                    <div class="media-left">
+                                        <a href="#" class="btn border-primary text-primary btn-flat btn-rounded btn-icon btn-sm"><i class="icon-git-pull-request"></i></a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        Drop the IE <a href="#">specific hacks</a> for temporal inputs
+                                        <div class="media-annotation">4 minutes ago</div>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left">
+                                        <a href="#" class="btn border-warning text-warning btn-flat btn-rounded btn-icon btn-sm"><i class="icon-git-commit"></i></a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        Add full font overrides for popovers and tooltips
+                                        <div class="media-annotation">36 minutes ago</div>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left">
+                                        <a href="#" class="btn border-info text-info btn-flat btn-rounded btn-icon btn-sm"><i class="icon-git-branch"></i></a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <a href="#">Chris Arney</a> created a new <span class="text-semibold">Design</span> branch
+                                        <div class="media-annotation">2 hours ago</div>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left">
+                                        <a href="#" class="btn border-success text-success btn-flat btn-rounded btn-icon btn-sm"><i class="icon-git-merge"></i></a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <a href="#">Eugene Kopyov</a> merged <span class="text-semibold">Master</span> and <span class="text-semibold">Dev</span> branches
+                                        <div class="media-annotation">Dec 18, 18:36</div>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left">
+                                        <a href="#" class="btn border-primary text-primary btn-flat btn-rounded btn-icon btn-sm"><i class="icon-git-pull-request"></i></a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        Have Carousel ignore keyboard events
+                                        <div class="media-annotation">Dec 12, 05:46</div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <div class="dropdown-content-footer">
+                                <a href="#" data-popup="tooltip" title="All activity"><i class="icon-menu display-block"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <p class="navbar-text"><span class="label bg-success">Online</span></p>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown language-switch">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="http://localhost:8081/shop/public/images/flags/gb.png" class="position-left" alt="">
+                            English
+                            <span class="caret"></span>
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li><a class="deutsch"><img src="http://localhost:8081/shop/public/images/flags/de.png" alt=""> Tiếng Việt</a></li>
+                            <li><a class="ukrainian"><img src="http://localhost:8081/shop/public/images/flags/ua.png" alt=""> Українська</a></li>
+                            <li><a class="english"><img src="http://localhost:8081/shop/public/images/flags/gb.png" alt=""> English</a></li>
+                            <li><a class="espana"><img src="http://localhost:8081/shop/public/images/flags/es.png" alt=""> España</a></li>
+                            <li><a class="russian"><img src="http://localhost:8081/shop/public/images/flags/ru.png" alt=""> Русский</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon-bubbles4"></i>
+                            <span class="visible-xs-inline-block position-right">Messages</span>
+                            <span class="badge bg-warning-400">2</span>
+                        </a>
+
+                        <div class="dropdown-menu dropdown-content width-350">
+                            <div class="dropdown-content-heading">
+                                Messages
+                                <ul class="icons-list">
+                                    <li><a href="#"><i class="icon-compose"></i></a></li>
+                                </ul>
+                            </div>
+
+                            <ul class="media-list dropdown-content-body">
+                                <li class="media">
+                                    <div class="media-left">
+                                        <img src="http://localhost:8081/shop/public/images/placeholder.jpg" class="img-circle img-sm" alt="">
+                                        <span class="badge bg-danger-400 media-badge">5</span>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <a href="#" class="media-heading">
+                                            <span class="text-semibold">James Alexander</span>
+                                            <span class="media-annotation pull-right">04:58</span>
+                                        </a>
+
+                                        <span class="text-muted">who knows, maybe that would be the best thing for me...</span>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left">
+                                        <img src="http://localhost:8081/shop/public/images/placeholder.jpg" class="img-circle img-sm" alt="">
+                                        <span class="badge bg-danger-400 media-badge">4</span>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <a href="#" class="media-heading">
+                                            <span class="text-semibold">Margo Baker</span>
+                                            <span class="media-annotation pull-right">12:16</span>
+                                        </a>
+
+                                        <span class="text-muted">That was something he was unable to do because...</span>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left"><img src="http://localhost:8081/shop/public/images/placeholder.jpg" class="img-circle img-sm" alt=""></div>
+                                    <div class="media-body">
+                                        <a href="#" class="media-heading">
+                                            <span class="text-semibold">Jeremy Victorino</span>
+                                            <span class="media-annotation pull-right">22:48</span>
+                                        </a>
+
+                                        <span class="text-muted">But that would be extremely strained and suspicious...</span>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left"><img src="http://localhost:8081/shop/public/images/placeholder.jpg" class="img-circle img-sm" alt=""></div>
+                                    <div class="media-body">
+                                        <a href="#" class="media-heading">
+                                            <span class="text-semibold">Beatrix Diaz</span>
+                                            <span class="media-annotation pull-right">Tue</span>
+                                        </a>
+
+                                        <span class="text-muted">What a strenuous career it is that I've chosen...</span>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left"><img src="http://localhost:8081/shop/public/images/placeholder.jpg" class="img-circle img-sm" alt=""></div>
+                                    <div class="media-body">
+                                        <a href="#" class="media-heading">
+                                            <span class="text-semibold">Richard Vango</span>
+                                            <span class="media-annotation pull-right">Mon</span>
+                                        </a>
+
+                                        <span class="text-muted">Other travelling salesmen live a life of luxury...</span>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <div class="dropdown-content-footer">
+                                <a href="#" data-popup="tooltip" title="All messages"><i class="icon-menu display-block"></i></a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="dropdown dropdown-user">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="http://localhost:8081/shop/public/images/placeholder.jpg" alt="">
+                            <span><?php
+                            if(isset($_SESSION['name']))
+                            {
+                                echo $_SESSION['name'];
+                            }
+                                    ?></span>
+                            <i class="caret"></i>
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
+                            <li><a href="#"><i class="icon-coins"></i> My balance</a></li>
+                            <li><a href="#"><span class="badge bg-teal-400 pull-right">58</span> <i class="icon-comment-discussion"></i> Messages</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
+                            <li><a href="#"><i class="icon-switch2"></i> Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-container">
+            <div class="page-content">
+                <div class="sidebar sidebar-main">
+                    <div class="sidebar-content">
+                        <div class="sidebar-user">
+                            <div class="category-content">
+                                <div class="media">
+                                    <a href="#" class="media-left"><img src="http://localhost:8081/shop/public/images/placeholder.jpg" class="img-circle img-sm" alt=""></a>
+                                    <div class="media-body">
+                                        <span class="media-heading text-semibold">Người dùng</span>
+                                        <div class="text-size-mini text-muted">
+                                            <i class="icon-pin text-size-small"></i> &nbsp;Địa chỉ Ana, CA
+                                        </div>
+                                    </div>
+
+                                    <div class="media-right media-middle">
+                                        <ul class="icons-list">
+                                            <li>
+                                                <a href="#"><i class="icon-cog3"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+
+                        
+                        <div class="sidebar-category sidebar-category-visible">
+                            <div class="category-content no-padding">
+                                <ul class="navigation navigation-main navigation-accordion">
+
+                                    
+                                    <li class="navigation-header"><span>Main</span> <i class="icon-menu" title="Main pages"></i></li>
+                                    <li class="active"><a href="http://localhost:8081/shop/public/adminstory"><i class="icon-home4"></i> <span>Trang chủ</span></a></li>
+
+                                    <li>
+                                        <a href="#"><i class="icon-stack2"></i> <span>Cơ sở dữ liệu</span></a>
+                                        <ul>
+                                            <li><a href="#"><i class="icon-droplet2"></i>Tất cả</a></li>
+                                            <li>
+                                                <a href="#"><i class="icon-droplet2"></i>Sản phẩm</a>
+                                                <ul>
+                                                    <li><a href="#"><i class="icon-android"></i>Tất cả sản phẩm</a></li>
+                                                    <li>
+                                                        <a href="#"><i class="icon-apple2"></i>Thống kê</a>
+                                                        <ul>
+                                                            <li><a href="#"><i class="icon-html5"></i>Sản phẩm bán chạy nhât trong tuần</a></li>
+                                                            <li><a href="#"><i class="icon-css3"></i>Trong tháng</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#"><i class="icon-windows"></i> Third level</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="icon-droplet2"></i>Nhóm sản phẩm</a>
+                                                <ul>
+                                                    <li><a href="#"><i class="icon-android"></i>Tất cả nhóm phẩm</a></li>
+                                                    <li>
+                                                        <a href="#"><i class="icon-apple2"></i>Thêm mới nhóm sản phẩm</a>
+
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="icon-droplet2"></i>Người dùng</a>
+                                                <ul>
+                                                    <li><a href="http://localhost:8081/shop/public/adminstory/usertable"><i class="icon-android"></i>Tất cả người dùng</a></li>
+                                                    <li>
+                                                        <a href="#"><i class="icon-apple2"></i>Thêm mới nhóm người dùng</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><i class="icon-apple2"></i>Thêm mới người dùng</a>
+
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="icon-droplet2"></i> <span>Đơn hàng</span></a>
+                                        <ul>
+                                            <li><a href="colors_primary.html"><i class="icon-droplet2"></i>Danh sách đơn hàng</a></li>
+                                            <li><a href="colors_danger.html"><i class="icon-droplet2"></i>Đơn hàng đang đợi</a></li>
+                                            <li><a href="colors_success.html"><i class="icon-droplet2"></i>Đơn hàng đã giao</a></li>
+                                            <li><a href="colors_warning.html"><i class="icon-droplet2"></i>Đơn hàng đã hủy</a></li>
+
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="icon-stack"></i> <span>Khuyến mãi</span></a>
+                                        <ul>
+                                            <li><a href="starters/horizontal_nav.html"><i class="icon-droplet2"></i>Danh sách khuyến mãi</a></li>
+                                            <li><a href="starters/1_col.html"><i class="icon-droplet2"></i>Thêm mới khuyến mãi</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="navigation-header"><span>Thông tin</span> <i class="icon-menu" title="Forms"></i></li>
+                                    <li>
+                                        <a href="#"><i class="icon-pencil3"></i> <span>Blog</span></a>
+
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="icon-file-css"></i> <span>Trang nội dung</span></a>
+
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="icon-spell-check"></i> <span>Thông tin cá nhân</span></a>
+                                        <ul>
+                                            <li><a href="editor_summernote.html">Summernote editor</a></li>
+                                            <li><a href="editor_ckeditor.html">CKEditor</a></li>
+                                            <li><a href="editor_wysihtml5.html">WYSIHTML5 editor</a></li>
+                                            <li><a href="editor_code.html">Code editor</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="navigation-header"><span>Website</span> <i class="icon-menu" title="Forms"></i></li>
+                                    <li>
+                                        <a href="#"><i class="icon-footprint"></i> <span>Giao diện</span></a>
+                                        <ul>
+                                            <li><a href="wizard_steps.html">Chưa nghĩ ra</a></li>
+                                        </ul>
+
+
+
+
+                                        
+                                    <li class="navigation-header"><span>Mở rộng</span> <i class="icon-menu" title="Appearance"></i></li>
+                                    <li>
+                                        <a href="#"><i class="icon-grid"></i> <span>Ứng dụng</span></a>
+                                        <ul>
+                                            <li><a href="components_modals.html">Danh sách ứng dụng</a></li>
+                                            <li><a href="components_dropdowns.html">Thêm ứng dụng</a></li>
+
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="icon-puzzle2"></i> <span>File</span></a>
+                                        <ul>
+                                            <li><a href="appearance_content_panels.html">Quản lý file</a></li>
+                                            <li><a href="appearance_panel_heading.html">Thêm file</a></li>
+
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="icon-gift"></i> <span>Cấu hinh</span></a>
+                                        <ul>
+                                            <li><a href="extra_sliders_noui.html">NoUI sliders</a></li>
+                                        </ul>
+                                    </li>
+
+
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="content-wrapper">
+                    <?= $this->content ?>
+
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>

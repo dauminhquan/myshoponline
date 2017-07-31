@@ -1,0 +1,10 @@
+<?php
+return array(
+    'db' => array(
+        'username' => 'myshop',
+        'password' => 'dauminhquan25061995',
+        'driver_options' => array(
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        ),
+    )
+);

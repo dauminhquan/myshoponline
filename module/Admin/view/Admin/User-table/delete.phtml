@@ -1,0 +1,29 @@
+
+<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-flat">
+                <div class="panel-heading">
+                    <!--<h5 class="panel-title"></h5>-->
+                    <div class="heading-elements">
+                        <ul class="icons-list">
+                            <li><a data-action="collapse"></a></li>
+                            <li><a data-action="reload"></a></li>
+                            <li><a data-action="close"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                Bạn chắc chắn xóa tài khoản 
+                <div class="panel-body">
+                    <form action="<?= $this->url('admin/usertable', ['action' => 'delete']); ?>" method="post">
+                        <div class="form-group">
+                            <input type="hidden" name="id" value="<?= (int) $_GET['id'] ?>" />
+                            <input type="submit" class="btn btn-danger" name="del" value="Yes" />
+                            <input type="submit" class="btn btn-success" name="del" value="No" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
