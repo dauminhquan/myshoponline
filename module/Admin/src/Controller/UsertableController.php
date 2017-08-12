@@ -19,7 +19,6 @@ class UserTableController extends AbstractActionController {
     public function __construct(BangNguoiDung $bangnguoidung) {
         $this->bangnguoidung = $bangnguoidung;
     }
-
     public function indexAction() {
         $result = $this->bangnguoidung->Laytoanbo();
         $data = array();
@@ -27,18 +26,18 @@ class UserTableController extends AbstractActionController {
             array_push($data, $row);
         }
         $_SESSION['name'] = 'Quân';
-        $_SESSION['scriptfile'] = '<script type="text/javascript" src="http://localhost:8081/shop/public/js/plugins/tables/datatables/datatables.min.js"></script>
-	<script type="text/javascript" src="http://localhost:8081/shop/public/js/plugins/forms/selects/select2.min.js"></script>
-
-	<script type="text/javascript" src="http://localhost:8081/shop/public/js/core/app.js"></script>
-	<script type="text/javascript" src="http://localhost:8081/shop/public/js/pages/datatables_api.js"></script>';
-        $this->layout('layout/layout');
+        $_SESSION['themejs'] = '<script type="text/javascript" src="/shop/public/assets/js/plugins/tables/datatables/datatables.min.js"></script>
+	<script type="text/javascript" src="/shop/public/assets/js/plugins/forms/selects/select2.min.js"></script>
+	<script type="text/javascript" src="/shop/public/assets/js/core/app.js"></script>
+	<script type="text/javascript" src="/shop/public/assets/js/pages/datatables_api.js"></script>';
+        $this->layout('layout/admin');
         return new ViewModel(array(
             'table' => $data,
         ));
     }
 
     public function editAction() {
+        $this->layout('layout/admin');
         if($this->getRequest()->isPost())
         {
             $user = new NguoiDung();
@@ -52,19 +51,9 @@ class UserTableController extends AbstractActionController {
         {
             return $this->redirect()->toRoute('admin/usertable', ['action' => 'index']);
         }
-        $_SESSION['scriptfile'] = '<script type="text/javascript" src="http://localhost:8081/shop/public/js/core/libraries/jquery_ui/interactions.min.js"></script>
-	<script type="text/javascript" src="http://localhost:8081/shop/public/js/plugins/forms/selects/select2.min.js"></script>
 
-	<script type="text/javascript" src="http://localhost:8081/shop/public/js/core/app.js"></script>
-	<script type="text/javascript" src="http://localhost:8081/shop/public/js/pages/form_select2.js"></script>
-        	<script type="text/javascript" src="http://localhost:8081/shop/public/js/plugins/forms/styling/uniform.min.js"></script>
-	<script type="text/javascript" src="http://localhost:8081/shop/public/js/pages/form_inputs.js"></script>';
         $table = $this->bangnguoidung->LaytheoId($_GET['id']);
-        $data = array();
-        foreach ($table as $data)
-        {
-            break;
-        }
+        $data = $table;
         if(!$data)
         {
             echo 'loi';
@@ -89,13 +78,13 @@ class UserTableController extends AbstractActionController {
             // Redirect to list of albums
             return $this->redirect()->toRoute('admin/usertable', ['action' => 'index']);
         }
-        $_SESSION['scriptfile'] = '<script type="text/javascript" src="http://localhost:8081/shop/public/js/core/libraries/jquery_ui/interactions.min.js"></script>
-	<script type="text/javascript" src="http://localhost:8081/shop/public/js/plugins/forms/selects/select2.min.js"></script>
+        $_SESSION['themejs'] = '<script type="text/javascript" src="/shop/public/assets/js/core/libraries/jquery_ui/interactions.min.js"></script>
+	<script type="text/javascript" src="/shop/public/assets/js/plugins/forms/selects/select2.min.js"></script>
 
-	<script type="text/javascript" src="http://localhost:8081/shop/public/js/core/app.js"></script>
-	<script type="text/javascript" src="http://localhost:8081/shop/public/js/pages/form_select2.js"></script>
-        	<script type="text/javascript" src="http://localhost:8081/shop/public/js/plugins/forms/styling/uniform.min.js"></script>
-	<script type="text/javascript" src="http://localhost:8081/shop/public/js/pages/form_inputs.js"></script>';
+	<script type="text/javascript" src="/shop/public/assets/js/core/app.js"></script>
+	<script type="text/javascript" src="/shop/public/assets/js/pages/form_select2.js"></script>
+        	<script type="text/javascript" src="/shop/public/assets/js/plugins/forms/styling/uniform.min.js"></script>
+	<script type="text/javascript" src="/shop/public/assets/js/pages/form_inputs.js"></script>';
         return new ViewModel();
     }
 }

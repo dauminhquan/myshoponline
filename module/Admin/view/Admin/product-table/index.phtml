@@ -1,3 +1,15 @@
+<!-- Page header -->
+<div class="page-header page-header-default">
+    <div class="page-header-content">
+        <div class="page-title">
+            <h6><i class="icon-home2 position-left"></i> <span class="text-semibold"><a href="#">Trang chủ</a> / Sản phẩm</span></h6>
+        </div>
+    </div>
+</div>
+<!-- /page header -->
+
+
+
 <div class="content">
     <div class="panel panel-flat">
         <div class="panel-heading">
@@ -18,51 +30,21 @@
                     <th>Tên</th>
                     <th>Nhóm SP</th>
                     <th>Loại SP</th>
-                    <th>Giới tính</th>
                     <th>Xuất xứ</th>
-                    <th>Kích cỡ</th>
-                    <th>Số lượng</th>
+                    
                     <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Marth</td>
-                    <td>Enright</td>
-                    <td>Traffic</td>
-                    <td>22 Jun 1972</td>
-                    <td>22 Jun 1972</td>
-                    <td>Marth</td>
-                    <td>Enright</td>
-                    <td>22 Jun 1972</td>
-                    <td class="text-center">
-                        <ul class="icons-list">
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="icon-menu9"></i>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a href="#"><i class="icon-file-pdf"></i>Sửa sản phẩm</a></li>
-                                    <li><a href="#"><i class="icon-file-excel"></i>Xóa sản phẩm</a></li>
-
-                                </ul>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
-
                 <?php
                 foreach ($this->data as $row) {
                     ?>
                     <tr>
-                        <td><?= $row['id_sanpham'] ?></td>
+                        <td><a href="#">#<?= $row['id_sanpham'] ?></a></td>
                         <td><?= $row['tensanpham'] ?></td>
                         <td><?= $row['tennhomsanpham'] ?></td>
                         <td><?= $row['tenloaisanpham'] ?></td>
-                        <td><?= $row['gioitinh'] ?></td>
                         <td><?= $row['xuatxu'] ?></td>
-                        <td><?= $row['kichco'] ?></td>
-                        <td><?= $row['soluong'] ?></td>
                         <td class="text-center">
                             <ul class="icons-list">
                                 <li class="dropdown">

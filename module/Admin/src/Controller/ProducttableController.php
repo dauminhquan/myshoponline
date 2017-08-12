@@ -15,6 +15,11 @@ class ProductTableController extends AbstractActionController {
         $this->bangsanpham = $bangsanpham;
         $this->bangnhomsanpham = $bangnhomsanpham;
         $this->bangloaisanpham = $bangloaisanpham;
+        $_SESSION['themejs'] = '<script type="text/javascript" src="/shop/public/assets/js/plugins/tables/datatables/datatables.min.js"></script>
+	<script type="text/javascript" src="/shop/public/assets/js/plugins/forms/selects/select2.min.js"></script>
+	<script type="text/javascript" src="/shop/public/assets/js/core/app.js"></script>
+	<script type="text/javascript" src="/shop/public/assets/js/pages/datatables_basic.js"></script>';
+        
     }
     public function setdata($row)
     {
@@ -22,6 +27,7 @@ class ProductTableController extends AbstractActionController {
     }
 
     public function indexAction() {
+        $this->layout('layout/admin');
         $this->data = array();
         $result = $this->bangsanpham->Laytoanbo();
         foreach ($result as $row)
@@ -39,11 +45,6 @@ class ProductTableController extends AbstractActionController {
             array_push($this->data,$dt);         
         }
         $_SESSION['name'] = 'Quân';
-        $_SESSION['scriptfile'] = '<script type="text/javascript" src="http://localhost:8081/shop/public/js/plugins/tables/datatables/datatables.min.js"></script>
-	<script type="text/javascript" src="http://localhost:8081/shop/public/js/plugins/forms/selects/select2.min.js"></script>
-	<script type="text/javascript" src="http://localhost:8081/shop/public/js/core/app.js"></script>
-	<script type="text/javascript" src="http://localhost:8081/shop/public/js/pages/datatables_basic.js"></script>';
-        $this->layout('layout/layout');
         return new ViewModel(array(
             'data' => $this->data,
         ));

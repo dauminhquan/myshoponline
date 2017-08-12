@@ -13,7 +13,7 @@ class BangNguoiDung implements TableInterface
         try
         {
             $dt= $this->table->select(array('id_nguoidung' =>$id));
-            return $dt;
+            return $dt->current();
         } catch (Exception $ex) {
             echo "ok";
             return false;

@@ -47,6 +47,7 @@ class BangSanpham
 
     public function Xoa($id) {
         $this->table->delete(array('id_sanpham' => $id));
+        
     }
 
 }

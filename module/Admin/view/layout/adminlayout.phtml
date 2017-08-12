@@ -1,38 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <?php
+        ?>  
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Shop Online | Quần áo đẹp</title>
-        <!-- global -->
-	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
-	<link href="http://localhost:8081/shop/public/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
-	<link href="http://localhost:8081/shop/public/css/bootstrap.css" rel="stylesheet" type="text/css">
-	<link href="http://localhost:8081/shop/public/css/core.css" rel="stylesheet" type="text/css">
-	<link href="http://localhost:8081/shop/public/css/components.css" rel="stylesheet" type="text/css">
-	<link href="http://localhost:8081/shop/public/css/colors.css" rel="stylesheet" type="text/css">
-        <!-- /global -->
-        <!-- corejs -->
-	<script type="text/javascript" src="http://localhost:8081/shop/public/js/plugins/loaders/pace.min.js"></script>
-	<script type="text/javascript" src="http://localhost:8081/shop/public/js/core/libraries/jquery.min.js"></script>
-	<script type="text/javascript" src="http://localhost:8081/shop/public/js/core/libraries/bootstrap.min.js"></script>
-	<script type="text/javascript" src="http://localhost:8081/shop/public/js/plugins/loaders/blockui.min.js"></script>
-        <!-- /corejs -->
-        <!--Theme js -->
-	<?php
-            if(isset($_SESSION['scriptfile']))
-            {
-                echo $_SESSION['scriptfile'];
-            }
+        <!-- Global stylesheets -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+        <?=
+                $this->headLink()
+                ->prependStylesheet($this->basePath('assets/css/colors.css'))
+                ->prependStylesheet($this->basePath('assets/css/components.css'))
+                ->prependStylesheet($this->basePath('assets/css/core.css'))
+                ->prependStylesheet($this->basePath('assets/css/bootstrap.css'))
+                ->prependStylesheet($this->basePath('assets/css/icons/icomoon/styles.css'));
         ?>
-         <!--/Theme js -->
+        <!-- /global stylesheets -->
+
+        <!-- Core JS files -->
+        <?=
+                $this->headScript()
+                ->prependFile($this->basePath('assets/js/plugins/loaders/blockui.min.js'))
+                ->prependFile($this->basePath('assets/js/core/libraries/bootstrap.min.js'))
+                ->prependFile($this->basePath('assets/js/core/libraries/jquery.min.js'))
+                ->prependFile($this->basePath('assets/js/plugins/loaders/pace.min.js'))
+        ?>
+
+        <!-- /core JS files -->
+
+        <!-- Theme JS files -->
+        <?php 
+            echo $_SESSION['themejs'];
+        ?>
+        <!-- /theme JS files -->
+
     </head>
     <body>
 
         <div class="navbar navbar-inverse">
             <div class="navbar-header">
-                <a class="navbar-brand" href="index.html"><img src="http://localhost:8081/shop/public/images/logo_light.png" alt=""></a>
+                <a class="navbar-brand" href="index.html"><img src="./assets/images/logo_light.png" alt=""></a>
 
                 <ul class="nav navbar-nav visible-xs-block">
                     <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
@@ -128,17 +137,17 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown language-switch">
                         <a class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="http://localhost:8081/shop/public/images/flags/gb.png" class="position-left" alt="">
+                            <img src="./assets/images/flags/gb.png" class="position-left" alt="">
                             English
                             <span class="caret"></span>
                         </a>
 
                         <ul class="dropdown-menu">
-                            <li><a class="deutsch"><img src="http://localhost:8081/shop/public/images/flags/de.png" alt=""> Tiếng Việt</a></li>
-                            <li><a class="ukrainian"><img src="http://localhost:8081/shop/public/images/flags/ua.png" alt=""> Українська</a></li>
-                            <li><a class="english"><img src="http://localhost:8081/shop/public/images/flags/gb.png" alt=""> English</a></li>
-                            <li><a class="espana"><img src="http://localhost:8081/shop/public/images/flags/es.png" alt=""> España</a></li>
-                            <li><a class="russian"><img src="http://localhost:8081/shop/public/images/flags/ru.png" alt=""> Русский</a></li>
+                            <li><a class="deutsch"><img src="./assets/images/flags/de.png" alt=""> Tiếng Việt</a></li>
+                            <li><a class="ukrainian"><img src="./assets/images/flags/ua.png" alt=""> Українська</a></li>
+                            <li><a class="english"><img src="./assets/images/flags/gb.png" alt=""> English</a></li>
+                            <li><a class="espana"><img src="./assets/images/flags/es.png" alt=""> España</a></li>
+                            <li><a class="russian"><img src="./assets/images/flags/ru.png" alt=""> Русский</a></li>
                         </ul>
                     </li>
 
@@ -160,7 +169,7 @@
                             <ul class="media-list dropdown-content-body">
                                 <li class="media">
                                     <div class="media-left">
-                                        <img src="http://localhost:8081/shop/public/images/placeholder.jpg" class="img-circle img-sm" alt="">
+                                        <img src="./assets/images/placeholder.jpg" class="img-circle img-sm" alt="">
                                         <span class="badge bg-danger-400 media-badge">5</span>
                                     </div>
 
@@ -176,7 +185,7 @@
 
                                 <li class="media">
                                     <div class="media-left">
-                                        <img src="http://localhost:8081/shop/public/images/placeholder.jpg" class="img-circle img-sm" alt="">
+                                        <img src="./assets/images/placeholder.jpg" class="img-circle img-sm" alt="">
                                         <span class="badge bg-danger-400 media-badge">4</span>
                                     </div>
 
@@ -191,7 +200,7 @@
                                 </li>
 
                                 <li class="media">
-                                    <div class="media-left"><img src="http://localhost:8081/shop/public/images/placeholder.jpg" class="img-circle img-sm" alt=""></div>
+                                    <div class="media-left"><img src="./assets/images/placeholder.jpg" class="img-circle img-sm" alt=""></div>
                                     <div class="media-body">
                                         <a href="#" class="media-heading">
                                             <span class="text-semibold">Jeremy Victorino</span>
@@ -203,7 +212,7 @@
                                 </li>
 
                                 <li class="media">
-                                    <div class="media-left"><img src="http://localhost:8081/shop/public/images/placeholder.jpg" class="img-circle img-sm" alt=""></div>
+                                    <div class="media-left"><img src="./assets/images/placeholder.jpg" class="img-circle img-sm" alt=""></div>
                                     <div class="media-body">
                                         <a href="#" class="media-heading">
                                             <span class="text-semibold">Beatrix Diaz</span>
@@ -215,7 +224,7 @@
                                 </li>
 
                                 <li class="media">
-                                    <div class="media-left"><img src="http://localhost:8081/shop/public/images/placeholder.jpg" class="img-circle img-sm" alt=""></div>
+                                    <div class="media-left"><img src="./assets/images/placeholder.jpg" class="img-circle img-sm" alt=""></div>
                                     <div class="media-body">
                                         <a href="#" class="media-heading">
                                             <span class="text-semibold">Richard Vango</span>
@@ -235,13 +244,12 @@
 
                     <li class="dropdown dropdown-user">
                         <a class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="http://localhost:8081/shop/public/images/placeholder.jpg" alt="">
+                            <img src="./assets/images/placeholder.jpg" alt="">
                             <span><?php
-                            if(isset($_SESSION['name']))
-                            {
-                                echo $_SESSION['name'];
-                            }
-                                    ?></span>
+        if (isset($_SESSION['name'])) {
+            echo $_SESSION['name'];
+        }
+        ?></span>
                             <i class="caret"></i>
                         </a>
 
@@ -251,7 +259,10 @@
                             <li><a href="#"><span class="badge bg-teal-400 pull-right">58</span> <i class="icon-comment-discussion"></i> Messages</a></li>
                             <li class="divider"></li>
                             <li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
-                            <li><a href="#"><i class="icon-switch2"></i> Logout</a></li>
+                            <li><a href="<?php
+//                                session_destroy();
+                                echo $this->url('admin/logout', array('controller' => 'index', 'action' => 'index'));
+        ?>"><i class="icon-switch2"></i>Đăng xuất</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -264,7 +275,7 @@
                         <div class="sidebar-user">
                             <div class="category-content">
                                 <div class="media">
-                                    <a href="#" class="media-left"><img src="http://localhost:8081/shop/public/images/placeholder.jpg" class="img-circle img-sm" alt=""></a>
+                                    <a href="#" class="media-left"><img src="./assets/images/placeholder.jpg" class="img-circle img-sm" alt=""></a>
                                     <div class="media-body">
                                         <span class="media-heading text-semibold">Người dùng</span>
                                         <div class="text-size-mini text-muted">
@@ -282,63 +293,46 @@
                                 </div>
                             </div>
                         </div>
-                        
 
 
-                        
+
+
                         <div class="sidebar-category sidebar-category-visible">
                             <div class="category-content no-padding">
                                 <ul class="navigation navigation-main navigation-accordion">
 
-                                    
+
                                     <li class="navigation-header"><span>Main</span> <i class="icon-menu" title="Main pages"></i></li>
-                                    <li class="active"><a href="http://localhost:8081/shop/public/adminstory"><i class="icon-home4"></i> <span>Trang chủ</span></a></li>
+                                    <li class="active"><a href="<?= $this->url('admin',['action'=>'index']) ?>"><i class="icon-home4"></i> <span>Trang chủ</span></a></li>
 
                                     <li>
-                                        <a href="#"><i class="icon-stack2"></i> <span>Cơ sở dữ liệu</span></a>
+                                        <a href="#"><i class="icon-database"></i> <span>Cơ sở dữ liệu</span></a>
                                         <ul>
-                                            <li><a href="#"><i class="icon-droplet2"></i>Tất cả</a></li>
+                                            <li><a href="#">Tất cả</a></li>
                                             <li>
-                                                <a href="#"><i class="icon-droplet2"></i>Sản phẩm</a>
+                                                <a href="#">Sản phẩm</a>
                                                 <ul>
-                                                    <li><a href="#"><i class="icon-android"></i>Tất cả sản phẩm</a></li>
+                                                    <li><a href="<?= $this->url('admin/producttable',['action' => 'index']) ?>">Tất cả sản phẩm</a></li>
                                                     <li>
-                                                        <a href="#"><i class="icon-apple2"></i>Thống kê</a>
+                                                        <a href="#">Thống kê</a>
                                                         <ul>
-                                                            <li><a href="#"><i class="icon-html5"></i>Sản phẩm bán chạy nhât trong tuần</a></li>
-                                                            <li><a href="#"><i class="icon-css3"></i>Trong tháng</a></li>
+                                                            <li><a href="#">Sản phẩm bán chạy nhât trong tuần</a></li>
+                                                            <li><a href="#">Trong tháng</a></li>
                                                         </ul>
                                                     </li>
-                                                    <li><a href="#"><i class="icon-windows"></i> Third level</a></li>
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a href="#"><i class="icon-droplet2"></i>Nhóm sản phẩm</a>
-                                                <ul>
-                                                    <li><a href="#"><i class="icon-android"></i>Tất cả nhóm phẩm</a></li>
-                                                    <li>
-                                                        <a href="#"><i class="icon-apple2"></i>Thêm mới nhóm sản phẩm</a>
-
-                                                    </li>
-                                                </ul>
+                                                <a href="#">Nhóm sản phẩm</a>
                                             </li>
                                             <li>
-                                                <a href="#"><i class="icon-droplet2"></i>Người dùng</a>
-                                                <ul>
-                                                    <li><a href="http://localhost:8081/shop/public/adminstory/usertable"><i class="icon-android"></i>Tất cả người dùng</a></li>
-                                                    <li>
-                                                        <a href="#"><i class="icon-apple2"></i>Thêm mới nhóm người dùng</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#"><i class="icon-apple2"></i>Thêm mới người dùng</a>
-
-                                                    </li>
-                                                </ul>
+                                                <a href="<?= $this->url('admin/usertable',['action' => 'index']) ?>">Người dùng</a>
+                                                
                                             </li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="#"><i class="icon-droplet2"></i> <span>Đơn hàng</span></a>
+                                        <a href="#"><i class=" icon-clipboard6"></i> <span>Đơn hàng</span></a>
                                         <ul>
                                             <li><a href="colors_primary.html"><i class="icon-droplet2"></i>Danh sách đơn hàng</a></li>
                                             <li><a href="colors_danger.html"><i class="icon-droplet2"></i>Đơn hàng đang đợi</a></li>
@@ -348,7 +342,7 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="#"><i class="icon-stack"></i> <span>Khuyến mãi</span></a>
+                                        <a href="#"><i class="icon-gift"></i> <span>Khuyến mãi</span></a>
                                         <ul>
                                             <li><a href="starters/horizontal_nav.html"><i class="icon-droplet2"></i>Danh sách khuyến mãi</a></li>
                                             <li><a href="starters/1_col.html"><i class="icon-droplet2"></i>Thêm mới khuyến mãi</a></li>
@@ -364,7 +358,7 @@
 
                                     </li>
                                     <li>
-                                        <a href="#"><i class="icon-spell-check"></i> <span>Thông tin cá nhân</span></a>
+                                        <a href="#"><i class="icon-profile"></i> <span>Thông tin cá nhân</span></a>
                                         <ul>
                                             <li><a href="editor_summernote.html">Summernote editor</a></li>
                                             <li><a href="editor_ckeditor.html">CKEditor</a></li>
@@ -374,7 +368,7 @@
                                     </li>
                                     <li class="navigation-header"><span>Website</span> <i class="icon-menu" title="Forms"></i></li>
                                     <li>
-                                        <a href="#"><i class="icon-footprint"></i> <span>Giao diện</span></a>
+                                        <a href="#"><i class="icon-display"></i> <span>Giao diện</span></a>
                                         <ul>
                                             <li><a href="wizard_steps.html">Chưa nghĩ ra</a></li>
                                         </ul>
@@ -382,10 +376,10 @@
 
 
 
-                                        
+
                                     <li class="navigation-header"><span>Mở rộng</span> <i class="icon-menu" title="Appearance"></i></li>
                                     <li>
-                                        <a href="#"><i class="icon-grid"></i> <span>Ứng dụng</span></a>
+                                        <a href="#"><i class="icon-puzzle2"></i> <span>Ứng dụng</span></a>
                                         <ul>
                                             <li><a href="components_modals.html">Danh sách ứng dụng</a></li>
                                             <li><a href="components_dropdowns.html">Thêm ứng dụng</a></li>
@@ -393,7 +387,7 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="#"><i class="icon-puzzle2"></i> <span>File</span></a>
+                                        <a href="#"><i class="icon-folder4"></i> <span>File</span></a>
                                         <ul>
                                             <li><a href="appearance_content_panels.html">Quản lý file</a></li>
                                             <li><a href="appearance_panel_heading.html">Thêm file</a></li>
@@ -401,7 +395,7 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="#"><i class="icon-gift"></i> <span>Cấu hinh</span></a>
+                                        <a href="#"><i class="icon-cogs"></i> <span>Cấu hinh</span></a>
                                         <ul>
                                             <li><a href="extra_sliders_noui.html">NoUI sliders</a></li>
                                         </ul>
@@ -415,7 +409,7 @@
                     </div>
                 </div>
                 <div class="content-wrapper">
-                    <?= $this->content ?>
+<?= $this->content ?>
 
                 </div>
 
