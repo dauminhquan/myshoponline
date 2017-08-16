@@ -1,0 +1,153 @@
+
+<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-flat">
+                <div class="panel-heading">
+                    <!--<h5 class="panel-title"></h5>-->
+                    <div class="heading-elements">
+                        <ul class="icons-list">
+                            <li><a data-action="collapse"></a></li>
+                            <li><a data-action="reload"></a></li>
+                            <li><a data-action="close"></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="panel-body">
+                    <div class="form-group">
+                        <legend class="text-bold">Chọn các mục cần sửa</legend>
+                        <select data-placeholder="Chọn các mục ....." multiple="multiple" class="select">
+                            <option></option>
+                            <optgroup label="Tài khoản">
+                                <option value="MK">Mật khẩu</option>
+                            </optgroup>
+                            <optgroup label="Thông tin cá nhân">
+                                <option value="AL">Họ</option>
+                                <option value="IA">Tên đệm</option>
+                                <option value="KS">Tên</option>
+                                <option value="KY">Địa chỉ</option>
+                                <option value="AL">Số điện thoại</option>
+                                <option value="IA">Email</option>
+                                <option value="KS">Ngày tháng năm sinh</option>
+                                <option value="KY">Quyền truy cập</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <!-- Form -->
+
+                    <form class="form-horizontal" action="#" method="post">
+                        <fieldset class="content-group">
+                            <legend class="text-bold">Danh sách mục</legend>
+
+                            <div class="form-group row">
+                                <div class="col-lg-6 row">
+                                    <label class="control-label col-lg-2">Tài khoản</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" name="taikhoan" class="form-control" value="<?= $this->taikhoan ?>">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-6 row">
+                                    <label class="control-label col-lg-2">Mật khẩu</label>
+                                    <div class="col-lg-10">
+                                        <input type="password" name="matkhau" class="form-control" value="<?= $this->matkhau ?>" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 row">
+                                    <label class="control-label col-lg-2">Họ</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" name="ho" class="form-control" placeholder="Nhập họ...." value="<?= $this->ho ?>" required>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-6 row">
+                                    <label class="control-label col-lg-2">Địa chỉ</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" name="diachi" class="form-control" placeholder="Nhập địa chỉ....." value="<?= $this->diachi ?>" required> 
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 row">
+                                    <label class="control-label col-lg-2">Tên đệm</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" name="tendem" class="form-control" placeholder="Nhập tên đệm...." value="<?= $this->tendem ?>" required>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-6 row">
+                                    <label class="control-label col-lg-2">Số điện thoại</label>
+                                    <div class="col-lg-10">
+                                        <input type="tel" name="sodienthoai" class="form-control" placeholder="Nhập số điện thoại....." value="<?= $this->sodienthoai ?>" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 row">
+                                    <label class="control-label col-lg-2">Tên</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" name="ten" class="form-control" placeholder="Nhập tên....." value="<?= $this->ten ?>" required>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-6 row">
+                                    <label class="control-label col-lg-2">Email</label>
+                                    <div class="col-lg-10">
+                                        <input type="email" name="email" class="form-control" placeholder="Nhập email......" value="<?= $this->email ?>" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 row">
+                                    <label class="control-label col-lg-2">Ngày sinh</label>
+                                    <div class="col-lg-10">
+                                        <input type="date" name="ngaythangnamsinh" class="form-control" placeholder="Nhập ngày tháng năm sinh......" value="<?= $this->ngaythangnamsinh ?>" required>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            
+
+
+                            
+                            <div class="form-group">
+                                <label class="control-label col-lg-2">Quyền truy cập</label>
+                                <div class="col-lg-10">
+                                    <select name="quyentruycap" class="form-control">
+                                        <?php
+                                        switch ($this->quyentruycap) {
+                                            case 1: echo '<option value="1" selected>Khách hàng</option>
+                                        <option value="2">Quản lý</option>
+                                        <option value="3">Admin</option>';
+                                                break;
+                                            case 2: echo '<option value="1">Khách hàng</option>
+                                        <option value="2" selected>Quản lý</option>
+                                        <option value="3">Admin</option>';
+                                                break;
+                                            case 3: echo '<option value="1">Khách hàng</option>
+                                        <option value="2">Quản lý</option>
+                                        <option value="3" selected>Admin</option>';
+                                                break;
+                                            default : echo '<option value="1" selected>Khách hàng</option>
+                                        <option value="2">Quản lý</option>
+                                        <option value="3">Admin</option>';
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <button type="submit" class="btn btn-primary">Thêm <i class="icon-arrow-right14 position-right"></i></button>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <!-- /Form -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -31,31 +31,30 @@
                     <th>Họ tên</th>
                     <th>Địa chỉ</th>
                     <th>Quyền truy cập</th>
-                    <th class="text-center">Actions</th>
+                    <th><a href="<?= $this->url('admin/usertable',array("action" => "add")) ?>"><i class="glyphicon glyphicon-plus" style="font-size: 30px;color: #33FF66"></i></a></th>
                 </tr>
             </thead>
-            <tbody>
-                <?php
-                foreach ($this->table as $row) {
-                    echo '<td><a href="#">#' . $row['id_nguoidung'] . '</a></td>';
-                    echo '<td>' . $row['taikhoan'] . '</td>';
-                    echo '<td>' . $row['ho'] . ' ' . $row['tendem'] . ' ' . $row['ten'] . '</td>';
-                    echo '<td>' . $row['diachi'] . '</td>';
-//                        echo '<td>'.$row['quyentruycap'].'</td>';
-                    switch ($row['quyentruycap']) {
-                        case 1:
-                            echo '<td>Người dùng</td>';
-                            break;
-                        case 2:
-                            echo '<td>Quản lý</td>';
-                            break;
-                        case 3:
-                            echo '<td>Admin</td>';
-                            break;
-                        default :
-                            echo '<td>null</td>';
-                    }
-                    echo '<td class="text-center">
+
+            <?php
+            foreach ($this->table as $row) {
+                echo '<tbody class="parent"><td><a href="'.$this->url('admin/usertable',array('action'=>'edit')).'?id='.$row['id_nguoidung'].'">#' . $row['id_nguoidung'] . '</a></td>';
+                echo '<td>' . $row['taikhoan'] . '</td>';
+                echo '<td>' . $row['ho'] . ' ' . $row['tendem'] . ' ' . $row['ten'] . '</td>';
+                echo '<td>' . $row['diachi'] . '</td>';
+                switch ($row['quyentruycap']) {
+                    case 1:
+                        echo '<td>Người dùng</td>';
+                        break;
+                    case 2:
+                        echo '<td>Quản lý</td>';
+                        break;
+                    case 3:
+                        echo '<td>Admin</td>';
+                        break;
+                    default :
+                        echo '<td>null</td>';
+                }
+                echo '<td class="text-center">
                         <ul class="icons-list">
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -63,17 +62,49 @@
                                 </a>
 
                                 <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a href="'.$this->url('admin/usertable',['action' =>'edit']).'?id='.$row['id_nguoidung'].'"><i class="glyphicon glyphicon-edit"></i> Chỉnh sửa</a></li>
-                                    <li><a id="delete"><i class="glyphicon glyphicon-remove"></i> Xóa</a></li>
+                                    <li>
+                                    <a class="xoa" data-toggle="confirmation" data-title="' . $row['id_nguoidung'] . '">Xóa<i class="glyphicon glyphicon-remove"></i></a>
+                                    </li>
+                                    
                                     
                                 </ul>
                             </li>
                         </ul>
-                    </td>';
-                }
-                ?>
+                    </td></tbody>';
+            }
+            ?>
 
-            </tbody>
+
         </table>
     </div>
 </div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.xoa').click(function () {
+           
+            var id =  $(this).attr('data-title');
+            
+            bootbox.confirm("<h3>Bạn chắc chắn muốn xóa chứ?</h3>", function (result) {
+               
+                if (result === true)
+                {
+                    $.ajax({
+                        type: "POST",
+                        url: "<?= $this->url('admin/usertable', array('action' => 'delete')) ?>",
+                        data: {
+                            id: id
+                        },
+                        success: function (data) {
+                            json = JSON.parse(data);
+                            if(json.id === true)
+                            {
+                                window.location.reload();
+                            }
+                        },
+                        dataType: 'json'
+                    });
+                }
+            });
+        });
+    });
+</script>

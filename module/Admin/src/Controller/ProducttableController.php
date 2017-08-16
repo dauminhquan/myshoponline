@@ -44,7 +44,7 @@ class ProductTableController extends AbstractActionController {
             $dt['tenloaisanpham'] = $lsp->tenloaisanpham;
             array_push($this->data,$dt);         
         }
-        $_SESSION['name'] = 'Quân';
+       
         return new ViewModel(array(
             'data' => $this->data,
         ));

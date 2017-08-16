@@ -28,10 +28,17 @@ class BangNguoiDung implements TableInterface
     public function Luu(NguoiDung $nguoidung) {
         
             $data = $nguoidung->getarray();
-            
             $id_nguoidung = (int) $nguoidung->id_nguoidung;
         if ($id_nguoidung == 0) {
+            $taikhoan = $data['taikhoan'];
+            $check = $this->table->select(array('taikhoan'=>$taikhoan))->current();
+            if(isset($check))
+            {
+                echo 'Lỗi trùng tài khoản';
+                die();
+            }
             $this->table->insert($data);
+            
         } else {
             if ($this->LaytheoId($id_nguoidung)) {
                 $this->table->update($data, array('id_nguoidung' => $id_nguoidung));
@@ -42,6 +49,11 @@ class BangNguoiDung implements TableInterface
     }
 
     public function Xoa($id) {
+        $check = $this->table->select(array('id_nguoidung'=> $id))->current();
+        if(!isset($check))
+        {
+            return false;
+        }
         $this->table->delete(array('id_nguoidung' => $id));
     }
 

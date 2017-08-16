@@ -11,7 +11,7 @@ class IndexController extends AbstractActionController {
 
     public function IndexAction() {
         $this->layout('layout/chartlayout');
-        echo 'ok';
+        $dt = new \File\File();
     }
 
     public function TestAction() {

@@ -22,6 +22,11 @@ class Authentication extends AuthenticationService{
         $this->identity = $identity;
         $this->authenticate($identity);
     }
+
+	/**
+	 * @param $username
+	 * @param $password
+	 */
     public function setIdentity($username,$password)
     {
         $this->identity->setIdentity($username)

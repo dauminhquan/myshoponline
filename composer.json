@@ -25,7 +25,9 @@
     "autoload": {
         "psr-4": {
             "Admin\\": "module/Admin/src/",
-            "Chart\\": "module/Chart/src/"
+            "Chart\\": "module/Chart/src/",
+            "File\\": "File"
+            
         }
     },
     "autoload-dev": {

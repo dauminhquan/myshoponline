@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8b7aebd8-475b-4c6e-91b9-21427a1fb439" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/module/Admin/view/Admin/User-table/add.phtml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/alpaca/optiontree-custom-options.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/alpaca/optiontree-custom-schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/alpaca/selects.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/d3/bars/bars_basic.tsv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/d3/bars/bars_grouped.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/d3/bars/bars_hierarchical.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/d3/bars/bars_horizontal.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/d3/bars/bars_stacked.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/d3/bars/bars_stacked_multiple.tsv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/d3/bars/bars_tooltip.tsv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/d3/lines/lines_basic.tsv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/d3/lines/lines_bivariate.tsv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/d3/lines/lines_difference.tsv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/d3/lines/lines_gradient.tsv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/d3/lines/lines_multi_series.tsv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/d3/lines/lines_small_multiples.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/d3/lines/lines_stacked.tsv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/d3/lines/lines_stacked_nest.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/d3/lines/lines_transitions.tsv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/d3/other/bubble.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/d3/other/treemap.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/d3/other/waterfall.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/d3/pies/donuts_update.tsv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/d3/pies/pies_basic.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/d3/pies/pies_nesting.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/d3/pies/pies_update.tsv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/d3/sunburst/sunburst_basic.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/d3/tree/tree_bracket.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/d3/tree/tree_data_basic.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/d3/tree/tree_data_collapsible.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/d3/tree/tree_data_dendrogram.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/d3/tree/tree_data_dendrogram_radial.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/d3/tree/tree_data_radial.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/dashboard/app_sales.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/dashboard/app_sales_heatmap.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/dashboard/bullets.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/dashboard/monthly_sales.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/dashboard/traffic_sources.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/dimple/demo_data.tsv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/fancytree/fancytree.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/handsontable/cars.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/handsontable/colors.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/jquery_ui/autocomplete.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/jquery_ui/autocomplete.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/maps/vector/gdp_demo_data.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/maps/vector/unemployment.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/tables/datatable_2500.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/tables/datatable_ajax.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/tables/datatable_nested.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/tags_input/cities.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/typeahead/countries.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/typeahead/movies.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/typeahead/nba.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/typeahead/nhl.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/uploader/plupload.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/wizard/additional.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/wizard/education.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/wizard/experience.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/wizard/json.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/wizard/personal_data.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/demo_data/wizard/store_in_database.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Admin/src/Controller/IndexController.php" afterPath="$PROJECT_DIR$/module/Admin/src/Controller/IndexController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Admin/src/Controller/LoginController.php" afterPath="$PROJECT_DIR$/module/Admin/src/Controller/LoginController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Admin/src/Controller/ProducttableController.php" afterPath="$PROJECT_DIR$/module/Admin/src/Controller/ProducttableController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Admin/src/Controller/UsertableController.php" afterPath="$PROJECT_DIR$/module/Admin/src/Controller/UsertableController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Admin/src/Model/Authentication.php" afterPath="$PROJECT_DIR$/module/Admin/src/Model/Authentication.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Admin/src/Model/BangLoaisanpham.php" afterPath="$PROJECT_DIR$/module/Admin/src/Model/BangLoaisanpham.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Admin/src/Model/BangNguoiDung.php" afterPath="$PROJECT_DIR$/module/Admin/src/Model/BangNguoiDung.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Admin/view/Admin/User-table/edit.phtml" afterPath="$PROJECT_DIR$/module/Admin/view/Admin/User-table/edit.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Admin/view/Admin/User-table/index.phtml" afterPath="$PROJECT_DIR$/module/Admin/view/Admin/User-table/index.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Admin/view/layout/adminlayout.phtml" afterPath="$PROJECT_DIR$/module/Admin/view/layout/adminlayout.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Chart/src/Controller/IndexController.php" afterPath="$PROJECT_DIR$/module/Chart/src/Controller/IndexController.php" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/Admin/src/Controller/IndexController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="464">
+              <caret line="43" column="8" lean-forward="false" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
+              <folding>
+                <element signature="e#35#63#0#PHP" expanded="true" />
+                <marker date="1502860841821" expanded="true" signature="1594:1664" ph="SELECT COUNT... " />
+                <marker date="1502860841821" expanded="true" signature="1745:1784" ph="SELECT COUNT... " />
+                <marker date="1502860841821" expanded="true" signature="1863:1900" ph="SELECT COUNT... " />
+                <marker date="1502860841821" expanded="true" signature="1982:2039" ph="SELECT COUNT... " />
+                <marker date="1502860841821" expanded="true" signature="2118:2155" ph="SELECT COUNT... " />
+                <marker date="1502860841821" expanded="true" signature="2235:2307" ph="SELECT id_do... donhang" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InvoiceController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/Admin/src/Controller/InvoiceController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/module/Admin/src/Controller/LoginController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="612">
+              <caret line="36" column="43" lean-forward="true" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+              <folding>
+                <element signature="e#36#85#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Authentication.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/Admin/src/Model/Authentication.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="27" column="23" lean-forward="false" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/module/Admin/src/Controller/IndexController.php" />
+        <option value="$PROJECT_DIR$/module/Admin/src/Model/Authentication.php" />
+        <option value="$PROJECT_DIR$/module/Admin/src/Controller/LoginController.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="10" />
+    <option name="y" value="20" />
+    <option name="width" value="1283" />
+    <option name="height" value="728" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8b7aebd8-475b-4c6e-91b9-21427a1fb439" name="Default" comment="" />
+      <created>1502860434603</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1502860434603</updated>
+      <workItem from="1502860436282" duration="1986000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1986000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1319" height="784" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/module/Admin/src/Controller/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="43" column="8" lean-forward="false" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
+          <folding>
+            <element signature="e#35#63#0#PHP" expanded="true" />
+            <marker date="1502860841821" expanded="true" signature="1594:1664" ph="SELECT COUNT... " />
+            <marker date="1502860841821" expanded="true" signature="1745:1784" ph="SELECT COUNT... " />
+            <marker date="1502860841821" expanded="true" signature="1863:1900" ph="SELECT COUNT... " />
+            <marker date="1502860841821" expanded="true" signature="1982:2039" ph="SELECT COUNT... " />
+            <marker date="1502860841821" expanded="true" signature="2118:2155" ph="SELECT COUNT... " />
+            <marker date="1502860841821" expanded="true" signature="2235:2307" ph="SELECT id_do... donhang" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Admin/src/Controller/InvoiceController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Admin/src/Model/Authentication.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="27" column="23" lean-forward="false" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Admin/src/Controller/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="43" lean-forward="true" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+          <folding>
+            <element signature="e#36#85#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

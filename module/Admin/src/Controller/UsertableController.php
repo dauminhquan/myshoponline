@@ -15,7 +15,7 @@ use Admin\Model\NguoiDung;
 class UserTableController extends AbstractActionController {
 
     private $bangnguoidung;
-
+    private $crid;
     public function __construct(BangNguoiDung $bangnguoidung) {
         $this->bangnguoidung = $bangnguoidung;
     }
@@ -23,9 +23,12 @@ class UserTableController extends AbstractActionController {
         $result = $this->bangnguoidung->Laytoanbo();
         $data = array();
         foreach ($result as $row) {
-            array_push($data, $row);
+            if($row['id_nguoidung'] != $_SESSION['id'])
+            {
+                array_push($data, $row);
+            }
+            
         }
-        $_SESSION['name'] = 'Quân';
         $_SESSION['themejs'] = '<script type="text/javascript" src="/shop/public/assets/js/plugins/tables/datatables/datatables.min.js"></script>
 	<script type="text/javascript" src="/shop/public/assets/js/plugins/forms/selects/select2.min.js"></script>
 	<script type="text/javascript" src="/shop/public/assets/js/core/app.js"></script>
@@ -34,6 +37,27 @@ class UserTableController extends AbstractActionController {
         return new ViewModel(array(
             'table' => $data,
         ));
+    }
+    public function addAction()
+    {
+        $this->layout('layout/admin');
+        $user = new NguoiDung();
+        if(isset($_POST['taikhoan']))
+        {
+            $user->Copydata($_POST);
+            try{
+                $this->bangnguoidung->Luu($user);
+                header('Local ' . $this->redirect()->toRoute('admin/usertable', ['action' => 'index']));
+            } catch (Exception $ex) {
+                echo 'Lỗi';
+            };
+           
+        }
+         
+    }
+    public function profileAction()
+    {
+        
     }
 
     public function editAction() {
@@ -63,28 +87,15 @@ class UserTableController extends AbstractActionController {
     }
     public function deleteAction()
     {
-        
-        $request = $this->getRequest();
-        if ($request->isPost()) {
-            $del = $request->getPost('del', 'No');//neu khong co kieu bien thi se mac dinh gan 
-            if ($del == 'Yes') {
-                $id = (int) $request->getPost('id');
-                if(!$id)
-                {
-                    return $this->redirect()->toRoute('admin/usertable', ['action' => 'index']);
-                }
-                $this->bangnguoidung->Xoa($id);
+        if (isset($_POST['id'])) {
+            
+            if(!$this->bangnguoidung->Xoa($_POST['id']))
+            {
+                return new \Zend\View\Model\JsonModel(array('id'=>FALSE));
             }
-            // Redirect to list of albums
-            return $this->redirect()->toRoute('admin/usertable', ['action' => 'index']);
+                return new \Zend\View\Model\JsonModel(array('id'=>TRUE));
+            
         }
-        $_SESSION['themejs'] = '<script type="text/javascript" src="/shop/public/assets/js/core/libraries/jquery_ui/interactions.min.js"></script>
-	<script type="text/javascript" src="/shop/public/assets/js/plugins/forms/selects/select2.min.js"></script>
-
-	<script type="text/javascript" src="/shop/public/assets/js/core/app.js"></script>
-	<script type="text/javascript" src="/shop/public/assets/js/pages/form_select2.js"></script>
-        	<script type="text/javascript" src="/shop/public/assets/js/plugins/forms/styling/uniform.min.js"></script>
-	<script type="text/javascript" src="/shop/public/assets/js/pages/form_inputs.js"></script>';
-        return new ViewModel();
+        return new \Zend\View\Model\JsonModel(array('id'=>FALSE));
     }
 }

@@ -14,7 +14,10 @@ class LoginController extends AbstractActionController {
         $this->authen = $authen;
     }
 
-    public function indexAction() {
+	/**
+	 * @return \Zend\View\Model\ViewModel
+	 */
+	public function indexAction() {
 
 //        if (isset($_SESSION['username']) && isset($_SESSION['password'])) {
 //            header('Local ' . $this->redirect()->toRoute('admin', ['action' => 'index']));
@@ -36,6 +39,7 @@ class LoginController extends AbstractActionController {
                 ));
             }
         }
+        $this->authen->setIdentity($username,$password);
         $this->authen->clearIdentity();
         return new ViewModel();
     }

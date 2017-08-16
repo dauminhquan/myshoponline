@@ -8,7 +8,6 @@ class BangLoaisanpham
     public function __construct(TableGateway $table) {
         $this->table = $table;
     }
-
     public function LaytheoId($id) {
         try
         {
@@ -32,7 +31,7 @@ class BangLoaisanpham
         
             $data = $loaisanpham->getarray();
             
-            $id_loaisanpham = (int) $loaisanpham->id_nguoidung;
+            $id_loaisanpham = (int) $loaisanpham->id_loaisanpham;
         if ($id_loaisanpham == 0) {
             $this->table->insert($data);
         } else {
@@ -43,7 +42,6 @@ class BangLoaisanpham
             }
         }
     }
-
     public function Xoa($id) {
         $this->table->delete(array('id_loaisanpham' => $id));
     }

@@ -1,16 +1,17 @@
 <?php
 namespace Admin\Controller;
 
+use Zend\Db\Adapter\Adapter;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 use Admin\Model\BangNguoiDung;
 use Zend\Db\TableGateway\TableGateway;
 use Zend\Db\Adapter\AdapterInterface;
-
 class IndexController extends AbstractActionController {
     private $adapter;
     public function __construct(AdapterInterface $adapter) {
         $this->adapter = $adapter;
+
         $_SESSION['themejs'] = '<script type="text/javascript" src="/shop/public/assets/js/plugins/visualization/d3/d3.min.js"></script>
 	<script type="text/javascript" src="/shop/public/assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
 	<script type="text/javascript" src="/shop/public/assets/js/plugins/forms/styling/switchery.min.js"></script>
@@ -40,7 +41,7 @@ class IndexController extends AbstractActionController {
         $sodonhangmoi = $this->adapter->query('SELECT COUNT(*) as count FROM donhang WHERE tinhtrang = 1')->execute()->current()['count'];
         $sosanpham = $this->adapter->query('SELECT COUNT(*) as count FROM sanpham')->execute()->current()['count'];
         $donhangmoi = $this->adapter->query('SELECT id_donhang,ngaydatdonhang,ho,ten FROM donhang WHERE tinhtrang = 1')->execute();
-
+		
         
         
 //print_r($sodonhangmoi->execute()->current());
